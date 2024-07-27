@@ -8,6 +8,7 @@ export default {
         "dark-grey-blue": "hsl(215deg, 19%, 25%)",
         "pale-orange": "hsl(25deg, 94%, 86%%)",
         "light-cream": "hsl(43deg, 78%, 98%)",
+        "light-cream-transparent": "hsl(43deg, 78%, 98%, 50%)",
         grey: "hsl(215deg, 5%, 54%)",
       },
     },
