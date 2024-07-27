@@ -7,7 +7,7 @@ import closeIcon from "../assets/shared/mobile/icon-close.svg";
 const mobileDesign = `block absolute py-10 left-0 top-20 z-50 bg-gradient-to-b from-light-cream to-transparent grad 
   w-full text-center text-dark-grey-blue font-[900] space-y-8 min-h-svh text-[24px] fraunces`;
 
-const desktopDesign = `flex md:uppercase gap-8 font-semibold text-grey text-[12px]`;
+const desktopDesign = `md:uppercase gap-8 font-semibold text-grey text-[12px]`;
 
 const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -35,7 +35,7 @@ const NavBar = () => {
       <ul
         className={`${
           isNavActive ? appliedDesign : "hidden"
-        } md:${appliedDesign}`}
+        } md:flex md:${appliedDesign}`}
       >
         <li>
           <NavLink to="/" onClick={() => setIsNavActive(false)}>
