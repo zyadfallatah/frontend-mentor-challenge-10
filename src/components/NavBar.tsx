@@ -19,7 +19,7 @@ const NavBar = () => {
   const appliedDesign = isNavActive ? mobileDesign : desktopDesign;
 
   return (
-    <nav className="relative flex justify-between items-center px-6 py-8 md:px-20 md:py-[50px] bg-light-cream">
+    <nav className="relative flex justify-between items-center py-8 md:py-[50px] bg-light-cream">
       <img
         src={logo}
         alt="logo"

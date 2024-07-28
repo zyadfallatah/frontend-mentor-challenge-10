@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import MainLayout from "./layouts/MainLayout";
-import Home from "./pages/HomePage";
+import Home from "./pages/Home/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 
 import {

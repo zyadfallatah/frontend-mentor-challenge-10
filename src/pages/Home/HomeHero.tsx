@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import mobileHero from "../assets/home/mobile/image-hero-coffeepress.jpg";
-import tabletHero from "../assets/home/tablet/image-hero-coffeepress.jpg";
-import desktopHero from "../assets/home/desktop/image-hero-coffeepress.jpg";
+import mobileHero from "../../assets/home/mobile/image-hero-coffeepress.jpg";
+import tabletHero from "../../assets/home/tablet/image-hero-coffeepress.jpg";
+import desktopHero from "../../assets/home/desktop/image-hero-coffeepress.jpg";
 
 const HomeHero = () => {
   return (
