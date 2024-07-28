@@ -1,9 +1,11 @@
-import HomeHero from "./HomeHero";
+import Hero from "./Hero";
+import Collections from "./Collections";
 
 const HomePage = () => {
   return (
     <main className="bg-light-cream min-h-svh">
-      <HomeHero />
+      <Hero />
+      <Collections />
     </main>
   );
 };
