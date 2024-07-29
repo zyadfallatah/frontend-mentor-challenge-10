@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import MainLayout from "./layouts/MainLayout";
-import Home from "./pages/Home/HomePage";
+import HomePage from "./pages/Home/HomePage";
+import AboutPage from "./pages/about/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 
 import {
@@ -16,7 +17,8 @@ import "./index.css";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
-      <Route index element={<Home />} />
+      <Route index element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )

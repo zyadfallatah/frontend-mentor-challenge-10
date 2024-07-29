@@ -4,6 +4,7 @@ import twitter from "../assets/shared/desktop/icon-twitter.svg";
 import instagram from "../assets/shared/desktop/icon-instagram.svg";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="grid place-items-center lg:grid-cols-3 lg:place-items-start lg:items-center gap-12 bg-dark-grey-blue mt-[9rem] text-center p-14 mb-[4.5rem]">
