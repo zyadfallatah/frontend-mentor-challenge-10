@@ -8,12 +8,12 @@ const Feature = ({ title, description, image }: FeatureProps) => {
   return (
     <div
       className="w-full bg-dark-cyan px-3 md:px-12 mb-6 py-12 max-md:pt-[4.5rem] rounded-lg flex flex-col justify-center items-center 
-    md:flex-row md:justify-start xl:flex-col gap-14 "
+    md:flex-row md:justify-start xl:flex-col gap-14 xl:min-h-[382px] xl:justify-center"
     >
       <img
         src={image}
         alt="Feature image"
-        className="mx-auto md:mx-0 md:size-14"
+        className="mx-auto md:mx-0 md:min-w-14"
       />
       <div className="text-center md:text-left xl:text-center">
         <h3 className="text-2xl font-black mb-6">{title}</h3>

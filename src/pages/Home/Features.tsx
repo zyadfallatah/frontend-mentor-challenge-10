@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <div
       className=" relative bg-dark-grey-blue text-light-cream px-6 py-16 text-center rounded-[10px] mt-[7.5rem]
-      h-[902px] md:max-h-[500px]"
+      h-[902px] md:max-h-[573px]"
     >
       <h2 className="text-[1.75rem] md:text-4xl xl:text-[2.5rem] font-black mb-6">
         Why choose us?
@@ -18,7 +18,7 @@ const Features = () => {
         growers to give you a more impactful experience on every level.
       </p>
 
-      <div className="absolute left-0 px-6 w-full grid place-items-center xl:grid-cols-3 xl:gap-8">
+      <div className="absolute left-0 xl:bottom-[-50%] xl:translate-y-[-50%] px-6 w-full grid place-items-center xl:grid-cols-3 xl:gap-8">
         <Feature
           title="Best quality"
           description="Discover an endless variety of the world’s best artisan coffee from each of our roasters."
