@@ -1,12 +1,14 @@
 import Button from "../../components/Button";
+import HorizontalLine from "../../components/HorizontalLine";
 import Step from "./Step";
 
 const Steps = () => {
   return (
     <div className="xl:px-[5rem]">
-      <h2 className="font-black text-grey text-center md:text-left text-2xl mt-[7.5rem]">
+      <h2 className="font-black text-grey text-center md:text-left text-2xl mt-[7.5rem] mb-10">
         How it works
       </h2>
+      <HorizontalLine />
       <div className="grid md:grid-cols-3 xl:place-items-start gap-14 xl:gap-[6rem] my-12  mx-auto">
         <Step
           stepNumber={1}
