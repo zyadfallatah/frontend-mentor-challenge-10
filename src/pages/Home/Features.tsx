@@ -17,8 +17,7 @@ const Features = () => {
         featured in our range. This means working closely with the best coffee
         growers to give you a more impactful experience on every level.
       </p>
-
-      <div className="absolute left-0 xl:bottom-[-50%] xl:translate-y-[-50%] px-6 w-full grid place-items-center xl:grid-cols-3 xl:gap-8">
+      <div className="w-full grid place-items-center xl:grid-cols-3 xl:gap-8">
         <Feature
           title="Best quality"
           description="Discover an endless variety of the world’s best artisan coffee from each of our roasters."
