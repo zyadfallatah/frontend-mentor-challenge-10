@@ -7,7 +7,7 @@ type FeatureProps = {
 const Feature = ({ title, description, image }: FeatureProps) => {
   return (
     <div
-      className="w-full bg-dark-cyan px-3 md:px-12 mb-6 py-12 max-md:pt-[4.5rem] rounded-lg flex flex-col justify-center items-center 
+      className="w-full bg-dark-cyan px-3 md:px-12 py-12 max-md:pt-[4.5rem] rounded-lg flex flex-col justify-center items-center 
     md:flex-row md:justify-start xl:flex-col gap-14 xl:min-h-[382px] xl:justify-center"
     >
       <img

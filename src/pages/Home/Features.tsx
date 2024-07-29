@@ -17,7 +17,7 @@ const Features = () => {
         </p>
       </div>
       <div
-        className="relative isolate w-full grid place-items-center text-light-cream xl:grid-cols-3 xl:gap-8 px-3 md:px-12
+        className="relative isolate text-light-cream w-full grid place-items-center gap-6 xl:grid-cols-3 xl:gap-8 px-3 md:px-12
        before:absolute before:top-0 before:-z-10 before:bg-dark-grey-blue before:rounded-b-[10px] before:w-full before:h-[34rem] md:before:h-[19.5rem]"
       >
         <Feature
