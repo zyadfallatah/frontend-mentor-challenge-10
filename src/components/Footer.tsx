@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="grid place-items-center lg:grid-cols-3 lg:place-items-start lg:items-center gap-12 bg-dark-grey-blue mt-[9rem] text-center p-14 mb-[4.5rem]">
+    <div
+      className="grid place-items-center xl:grid-cols-3 xl:place-items-start xl:items-center gap-12 bg-dark-grey-blue mt-[9rem] 
+    text-center p-14 xl:px-[5.25rem] xl:py-12 mb-[4.5rem]"
+    >
       <img src={lightLogo} alt="logo" />
       <nav>
         <ul className="flex flex-col md:flex-row gap-6 text-grey font-bold text-[.75rem]">
@@ -22,7 +25,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <nav className="lg:ml-auto">
+      <nav className="xl:ml-auto">
         <ul className="flex items-center gap-6">
           <li>
             <Link to="#">
