@@ -8,7 +8,9 @@ const Headquarter = ({ image, country, address }: Headquarter) => {
   const getAddressArray = address.split("\n");
 
   return (
-    <div className={`text-dark-grey-blue text-center md:text-left`}>
+    <div
+      className={`text-dark-grey-blue text-center md:text-left md:mx-auto xl:mx-0`}
+    >
       <img src={image} alt="" className="mx-auto mb-12 md:mx-0" />
       <h3 className="text-[1.75rem] font-black mb-6 md:text-2xl xl:text-[2rem]">
         {country}
