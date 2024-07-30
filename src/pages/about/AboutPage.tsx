@@ -1,5 +1,11 @@
+import Hero from "./Hero";
+
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default AboutPage;
