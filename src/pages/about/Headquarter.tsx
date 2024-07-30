@@ -10,7 +10,9 @@ const Headquarter = ({ image, country, address }: Headquarter) => {
   return (
     <div className={`text-dark-grey-blue text-center md:text-left`}>
       <img src={image} alt="" className="mx-auto mb-12 md:mx-0" />
-      <h3 className="text-[1.75rem] font-black mb-6 md:text-2xl">{country}</h3>
+      <h3 className="text-[1.75rem] font-black mb-6 md:text-2xl xl:text-[2rem]">
+        {country}
+      </h3>
       <address className="min-w-[222px] xl:min-w-[285px]">
         {getAddressArray.map((addressData, index) => {
           return <p key={index}>{addressData}</p>;

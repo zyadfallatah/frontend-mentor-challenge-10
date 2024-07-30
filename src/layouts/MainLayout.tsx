@@ -7,7 +7,7 @@ const MainLayout = () => {
     <>
       <NavBar />
       <Outlet />
-      {/* <Footer /> It will be Returned After All Pages Added */}
+      {/* <Footer /> */}
     </>
   );
 };
