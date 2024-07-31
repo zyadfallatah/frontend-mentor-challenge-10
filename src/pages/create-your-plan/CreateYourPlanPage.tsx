@@ -1,5 +1,9 @@
+import Hero from "./Hero";
+
 const CreateYourPlanPage = () => {
-  return <div>Create Plan Page</div>
+  return <div>
+    <Hero />
+  </div>
 }
 
 export default CreateYourPlanPage;
