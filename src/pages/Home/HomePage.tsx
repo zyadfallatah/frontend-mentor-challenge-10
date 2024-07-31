@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 import Collections from "./Collections";
 import Features from "./Features";
-import Steps from "./Steps";
+import Steps from "../../components/Steps";
 
 const HomePage = () => {
   return (

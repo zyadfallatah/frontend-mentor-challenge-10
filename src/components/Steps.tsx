@@ -1,5 +1,5 @@
-import Button from "../../components/Button";
-import HorizontalLine from "../../components/HorizontalLine";
+import Button from "./Button";
+import HorizontalLine from "./HorizontalLine";
 import Step from "./Step";
 
 const Steps = () => {
