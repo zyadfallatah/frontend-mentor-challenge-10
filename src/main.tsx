@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/Home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
+import CreateYourPlanPage from "./pages/create-your-plan/CreateYourPlanPage";
 import ErrorPage from "./pages/ErrorPage";
 
 import {
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/create-your-plan" element={<CreateYourPlanPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )
