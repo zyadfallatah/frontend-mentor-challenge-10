@@ -1,14 +1,33 @@
+import { createContext, PropsWithChildren, useContext } from "react";
+
+
 import Button from "./Button";
 import HorizontalLine from "./HorizontalLine";
 import Step from "./Step";
 
-const Steps = () => {
+type Steps = PropsWithChildren & {
+  darkTheme?: boolean,
+  className?: string
+}
+
+const Steps = ({className = "", darkTheme = false, children} : Steps ) => {
   return (
-    <div className="xl:px-[5rem]">
-      <h2 className="font-black text-grey text-center md:text-left text-2xl mt-[7.5rem] mb-10">
-        How it works
-      </h2>
-      <HorizontalLine />
+    <div className={`xl:px-[5rem] rounded-[10px] ${className} ${darkTheme ? "bg-dark-grey-blue text-light-cream" : "text-dark-grey-blue"}`}>
+      {children}
+    </div>
+  );
+};
+
+Steps.Title = () => {
+  return <h2 className=" font-black text-grey text-center md:text-left text-2xl mt-[7.5rem] mb-10">
+  How it works
+  </h2>
+}
+
+Steps.CoreDesign = ({darkTheme = false}) => {
+  return (
+    <>
+      <HorizontalLine darkTheme={darkTheme} />
       <div className="grid md:grid-cols-3 xl:place-items-start gap-14 xl:gap-[6rem] my-12  mx-auto">
         <Step
           stepNumber={1}
@@ -27,9 +46,12 @@ const Steps = () => {
         world-class coffees curated to provide a distinct tasting experience."
         />
       </div>
-      <Button />
-    </div>
-  );
-};
+    </>
+  )
+}
+
+Steps.Button = () => {
+  return <Button />
+}
 
 export default Steps;
