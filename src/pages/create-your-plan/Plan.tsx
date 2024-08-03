@@ -79,6 +79,7 @@ const Plan = () => {
         header="Want us to grind them?"
         plan="grind"
         dispatcher={dispatch}
+        disabled={state.howToDrink === "Capsule"}
       >
         <PlanOptions.Option
           title="Wholebean"

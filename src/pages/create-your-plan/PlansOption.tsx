@@ -20,16 +20,31 @@ const PlansOption = ({
   plan,
   dispatcher,
   children,
-}: PlansOptionProps & PropsWithChildren & { header: string }) => {
+  disabled = false,
+}: PlansOptionProps &
+  PropsWithChildren & { header: string; disabled?: boolean }) => {
   const [isOptionOpened, setIsOptionOpened] = useState(false);
 
+  const handleOptionOpening = function () {
+    if (disabled) {
+      setIsOptionOpened(false);
+      return;
+    }
+    setIsOptionOpened(!isOptionOpened);
+  };
   return (
     <div className={`${isOptionOpened ? "mb-24" : ""}`}>
       <header
         className="flex justify-between items-center gap-16 mb-8"
-        onClick={() => setIsOptionOpened(!isOptionOpened)}
+        onClick={() => handleOptionOpening()}
       >
-        <h3 className="text-grey text-2xl font-black basis">{header}</h3>
+        <h3
+          className={`text-2xl font-black ${
+            disabled ? "text-gray-400" : "text-grey"
+          } `}
+        >
+          {header}
+        </h3>
         <img
           src={arrow}
           alt="arrow image"
