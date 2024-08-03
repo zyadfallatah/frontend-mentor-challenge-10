@@ -12,14 +12,22 @@ const Summary = ({ plan }: { plan: Plan }) => {
       </h2>
       <p className="fraunces text-light-cream text-2xl font-black">
         “I drink my coffee as{" "}
-        <b className="text-dark-cyan">{handlePlanRender(plan.howToDrink)}</b>,
-        with a{" "}
-        <b className="text-dark-cyan">{handlePlanRender(plan.coffeeType)}</b>{" "}
-        type of bean.
-        <b className="text-dark-cyan">{handlePlanRender(plan.amount)}</b>ground
-        ala <b className="text-dark-cyan">{handlePlanRender(plan.grind)}</b>,
+        <span className="text-dark-cyan">
+          {handlePlanRender(plan.howToDrink)}
+        </span>
+        , with a{" "}
+        <span className="text-dark-cyan">
+          {handlePlanRender(plan.coffeeType)}
+        </span>{" "}
+        type of bean.{" "}
+        <span className="text-dark-cyan">{handlePlanRender(plan.amount)}</span>{" "}
+        ground ala{" "}
+        <span className="text-dark-cyan">{handlePlanRender(plan.grind)}</span>,
         sent to me{" "}
-        <b className="text-dark-cyan">{handlePlanRender(plan.interval)}</b>.”
+        <span className="text-dark-cyan">
+          {handlePlanRender(plan.interval)}
+        </span>
+        .”
       </p>
     </div>
   );

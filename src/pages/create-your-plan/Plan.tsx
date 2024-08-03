@@ -7,7 +7,7 @@ const Plan = () => {
   const [state, dispatch] = useOptions();
 
   return (
-    <form className=" mt-[7.5rem]">
+    <form className=" mt-[7.5rem]" onSubmit={() => console.log("Wow")}>
       <PlanOptions
         header="How do you drink your coffee?"
         plan="howToDrink"
