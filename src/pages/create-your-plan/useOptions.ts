@@ -3,7 +3,7 @@ import { useReducer } from "react";
 export type Plan = {
   howToDrink: string;
   coffeeType: string;
-  amount: number;
+  amount: string;
   grind: string;
   interval: string;
 };
@@ -16,7 +16,7 @@ export type OptionsAction = {
 const reducer = function (state: Plan, action: OptionsAction): Plan {
   switch (action.type) {
     case "set_amount":
-      return { ...state, amount: Number.parseInt(action.payload) };
+      return { ...state, amount: action.payload };
     case "set_coffeeType":
       return { ...state, coffeeType: action.payload };
     case "set_grind":
@@ -32,7 +32,7 @@ const useOptions = function () {
   return useReducer(reducer, {
     howToDrink: "",
     coffeeType: "",
-    amount: -1,
+    amount: "",
     grind: "",
     interval: "",
   });
