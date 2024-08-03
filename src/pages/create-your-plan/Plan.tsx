@@ -5,8 +5,7 @@ const Plan = () => {
   const [, dispatch] = useOptions();
 
   return (
-    <form className="space-y-4">
-      <h2>Plan</h2>
+    <form className="space-y-4 mt-[7.5rem]">
       <FormOptions
         header="How do you drink your coffee?"
         plan="howToDrink"

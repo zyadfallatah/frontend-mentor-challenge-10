@@ -24,8 +24,8 @@ const PlansOption = ({
   const [isOptionOpened, setIsOptionOpened] = useState(false);
 
   return (
-    <div>
-      <header className="flex justify-between items-center gap-8 mb-8">
+    <div className={`${isOptionOpened ? "mb-24" : ""}`}>
+      <header className="flex justify-between items-center gap-16 mb-8">
         <h3 className="text-grey text-2xl font-black basis">{header}</h3>
         <img
           src={arrow}
