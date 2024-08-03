@@ -21,9 +21,14 @@ const PlansOption = ({
   dispatcher,
   children,
   disabled = false,
+  active = false,
 }: PlansOptionProps &
-  PropsWithChildren & { header: string; disabled?: boolean }) => {
-  const [isOptionOpened, setIsOptionOpened] = useState(false);
+  PropsWithChildren & {
+    header: string;
+    disabled?: boolean;
+    active?: boolean;
+  }) => {
+  const [isOptionOpened, setIsOptionOpened] = useState(active);
 
   const handleOptionOpening = function () {
     if (disabled) {

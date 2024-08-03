@@ -22,6 +22,7 @@ const Plan = () => {
         header="How do you drink your coffee?"
         plan="howToDrink"
         dispatcher={dispatch}
+        active
       >
         <PlanOptions.Option
           title="Capsule"
