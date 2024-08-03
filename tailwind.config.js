@@ -10,6 +10,7 @@ export default {
         "light-cream": "hsl(43deg, 78%, 98%)",
         "light-cream-transparent": "hsl(43deg, 78%, 98%, 50%)",
         grey: "hsl(215deg, 5%, 54%)",
+        "light-gray": "hsl(43deg, 30%, 94%)",
       },
     },
   },
