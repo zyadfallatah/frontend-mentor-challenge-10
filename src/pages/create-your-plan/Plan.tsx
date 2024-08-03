@@ -1,13 +1,23 @@
-import Button from "../../components/Button";
+import { FormEvent, useState } from "react";
 import PlanOptions from "./PlansOption";
 import Summary from "./Summary";
 import { useOptions } from "./useOptions";
+import Order from "./Order";
 
 const Plan = () => {
   const [state, dispatch] = useOptions();
+  const [showOrder, setShowOrder] = useState(false);
+
+  const handleSubmit = function (e: FormEvent) {
+    e.preventDefault();
+
+    setShowOrder(!showOrder);
+  };
 
   return (
-    <form className=" mt-[7.5rem]" onSubmit={() => console.log("Wow")}>
+    <form className=" mt-[7.5rem]" onSubmit={handleSubmit}>
+      {showOrder && <Order summary={state} hideOrder={setShowOrder} />}
+
       <PlanOptions
         header="How do you drink your coffee?"
         plan="howToDrink"
@@ -103,8 +113,20 @@ const Plan = () => {
         />
       </PlanOptions>
 
-      <Summary plan={state} />
-      <Button />
+      <div className="px-6 py-8 bg-dark-grey-blue rounded-lg">
+        <h2 className="barlow text-grey text-[1rem] font-normal uppercase mb-2">
+          Order Summary
+        </h2>
+        <div className="text-light-cream">
+          <Summary plan={state} />
+        </div>
+      </div>
+
+      <input
+        type="submit"
+        value="Create my plan"
+        className="block w-fit mt-14 mx-auto md:mx-0 text-[18px] px-8 py-4 bg-dark-cyan rounded-[6px] font-black fraunces text-light-cream"
+      />
     </form>
   );
 };
