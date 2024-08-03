@@ -1,8 +1,10 @@
+import Button from "../../components/Button";
 import PlanOptions from "./PlansOption";
+import Summary from "./Summary";
 import { useOptions } from "./useOptions";
 
 const Plan = () => {
-  const [, dispatch] = useOptions();
+  const [state, dispatch] = useOptions();
 
   return (
     <form className=" mt-[7.5rem]">
@@ -100,6 +102,9 @@ const Plan = () => {
           description="$12.00 per shipment. Includes free priority shipping."
         />
       </PlanOptions>
+
+      <Summary plan={state} />
+      <Button />
     </form>
   );
 };
