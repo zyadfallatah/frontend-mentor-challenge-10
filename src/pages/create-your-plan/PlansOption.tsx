@@ -25,18 +25,26 @@ const PlansOption = ({
 
   return (
     <div className={`${isOptionOpened ? "mb-24" : ""}`}>
-      <header className="flex justify-between items-center gap-16 mb-8">
+      <header
+        className="flex justify-between items-center gap-16 mb-8"
+        onClick={() => setIsOptionOpened(!isOptionOpened)}
+      >
         <h3 className="text-grey text-2xl font-black basis">{header}</h3>
         <img
           src={arrow}
           alt="arrow image"
           className={`${isOptionOpened ? "rotate-180" : ""}`}
-          onClick={() => setIsOptionOpened(!isOptionOpened)}
         />
       </header>
-      <OptionContext.Provider value={{ plan, dispatcher }}>
-        {isOptionOpened && children}
-      </OptionContext.Provider>
+      <main
+        className={`${
+          isOptionOpened ? "block opacity-100" : "hidden opacity-0"
+        } `}
+      >
+        <OptionContext.Provider value={{ plan, dispatcher }}>
+          {children}
+        </OptionContext.Provider>
+      </main>
     </div>
   );
 };
@@ -50,17 +58,18 @@ PlansOption.Option = ({
 }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { plan, dispatcher } = useOptionsContext();
-  const currentDate = Date.now();
+  const uniqueID = Math.random() * 1000000 + Date.now();
+
   return (
     <div className="mb-4">
       <input
         type="radio"
         name={plan}
-        id={`${title}-${currentDate}`}
+        id={`${uniqueID}`}
         className="peer appearance-none hidden"
       />
       <label
-        htmlFor={`${title}-${currentDate}`}
+        htmlFor={`${uniqueID}`}
         className="block text-dark-grey-blue bg-light-gray hover:bg-pale-orange peer-checked:bg-dark-cyan peer-checked:text-light-cream p-6 rounded-lg"
         onClick={() => dispatcher!({ type: `set_${plan}`, payload: title })}
       >
