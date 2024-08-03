@@ -50,16 +50,17 @@ PlansOption.Option = ({
 }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { plan, dispatcher } = useOptionsContext();
+  const currentDate = Date.now();
   return (
     <div className="mb-4">
       <input
         type="radio"
         name={plan}
-        id={title}
+        id={`${title}-${currentDate}`}
         className="peer appearance-none hidden"
       />
       <label
-        htmlFor={title}
+        htmlFor={`${title}-${currentDate}`}
         className="block text-dark-grey-blue bg-light-gray hover:bg-pale-orange peer-checked:bg-dark-cyan peer-checked:text-light-cream p-6 rounded-lg"
         onClick={() => dispatcher!({ type: `set_${plan}`, payload: title })}
       >
