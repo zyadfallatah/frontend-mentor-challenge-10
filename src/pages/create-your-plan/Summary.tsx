@@ -17,16 +17,16 @@ const Summary = ({ plan }: { plan: Plan }) => {
           {handlePlanRender(plan.coffeeType)}
         </span>{" "}
         type of bean.{" "}
+        <span className="text-dark-cyan">{handlePlanRender(plan.amount)}</span>{" "}
         {plan.howToDrink !== "Capsule" && (
           <>
-            {" "}
-            <span className="text-dark-cyan">
-              {handlePlanRender(plan.amount)}
-            </span>{" "}
             ground ala{" "}
+            <span className="text-dark-cyan">
+              {handlePlanRender(plan.grind)}
+            </span>
+            ,
           </>
         )}
-        <span className="text-dark-cyan">{handlePlanRender(plan.grind)}</span>,
         sent to me{" "}
         <span className="text-dark-cyan">
           {handlePlanRender(plan.interval)}
