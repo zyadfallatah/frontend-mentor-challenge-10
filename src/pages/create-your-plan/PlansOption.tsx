@@ -57,7 +57,7 @@ const PlansOption = ({
         />
       </header>
       <main
-        className={`${
+        className={` grid gap-4 md:grid-cols-3 ${
           isOptionOpened ? "block opacity-100" : "hidden opacity-0"
         } `}
       >
@@ -81,7 +81,7 @@ PlansOption.Option = ({
   const uniqueID = Math.random() * 1000000 + Date.now();
 
   return (
-    <div className="mb-4">
+    <div>
       <input
         type="radio"
         name={plan}
@@ -90,10 +90,11 @@ PlansOption.Option = ({
       />
       <label
         htmlFor={`${uniqueID}`}
-        className="block text-dark-grey-blue bg-light-gray hover:bg-pale-orange peer-checked:bg-dark-cyan peer-checked:text-light-cream p-6 rounded-lg"
+        className="block text-dark-grey-blue bg-light-gray hover:bg-pale-orange peer-checked:bg-dark-cyan peer-checked:text-light-cream p-6 rounded-lg
+        md:min-h-[15.625rem]"
         onClick={() => dispatcher!({ type: `set_${plan}`, payload: title })}
       >
-        <h2 className="text-2xl font-black">{title}</h2>
+        <h2 className="text-2xl font-black md:mb-6">{title}</h2>
         <p>{description}</p>
       </label>
     </div>

@@ -19,7 +19,7 @@ const CreatePlanSubmit = ({ state }: { state: Plan }) => {
       value="Create my plan"
       className={`block w-fit ${
         isDisabled ? "bg-grey" : "bg-dark-cyan"
-      } mt-14 mx-auto md:mx-0 text-[18px] px-8 py-4 rounded-[6px] font-black fraunces text-light-cream`}
+      } mt-14 mx-auto lg:ml-auto lg:mr-0 text-[18px] px-8 py-4 rounded-[6px] font-black fraunces text-light-cream`}
       disabled={isDisabled}
     />
   );
