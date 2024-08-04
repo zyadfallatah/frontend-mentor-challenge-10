@@ -24,7 +24,7 @@ const Plan = () => {
     >
       {showOrder && <Order summary={state} hideOrder={setShowOrder} />}
 
-      <PlanNavigator />
+      <PlanNavigator state={state} />
       <div>
         <PlanOptions
           header="How do you drink your coffee?"

@@ -78,18 +78,18 @@ PlansOption.Option = ({
 }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { plan, dispatcher } = useOptionsContext();
-  const uniqueID = Math.random() * 1000000 + Date.now();
+  const uniqueID = Math.round(Math.random() * 1000000 + Date.now());
 
   return (
     <div>
       <input
         type="radio"
         name={plan}
-        id={`${uniqueID}`}
+        id={`id-${uniqueID}`}
         className="peer appearance-none hidden"
       />
       <label
-        htmlFor={`${uniqueID}`}
+        htmlFor={`id-${uniqueID}`}
         className="block text-dark-grey-blue bg-light-gray hover:bg-pale-orange peer-checked:bg-dark-cyan peer-checked:text-light-cream p-6 rounded-lg
         md:min-h-[15.625rem]"
         onClick={() => dispatcher!({ type: `set_${plan}`, payload: title })}
