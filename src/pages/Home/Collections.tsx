@@ -16,18 +16,22 @@ const Collections = () => {
       </h2>
       <div className="space-y-12 md:space-y-0 xl:grid grid-cols-4 place-items-center gap-[1.88rem]">
         <Collection
+          title="Gran Espresoo"
           image={granEspresso}
           description="Light and flavorful blend with cocoa and black pepper for an intense experience"
         />
         <Collection
+          title="Planalto"
           image={planalto}
           description="Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
         />
         <Collection
+          title="Piccollo "
           image={piccollo}
           description="Mild and smooth blend featuring notes of toasted almond and dried cherry"
         />
         <Collection
+          title="Danche"
           image={danche}
           description="Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
         />

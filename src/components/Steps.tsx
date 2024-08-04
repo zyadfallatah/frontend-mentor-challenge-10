@@ -1,30 +1,35 @@
-import { createContext, PropsWithChildren, useContext } from "react";
-
+import { PropsWithChildren } from "react";
 
 import Button from "./Button";
 import HorizontalLine from "./HorizontalLine";
 import Step from "./Step";
 
 type Steps = PropsWithChildren & {
-  darkTheme?: boolean,
-  className?: string
-}
+  darkTheme?: boolean;
+  className?: string;
+};
 
-const Steps = ({className = "", darkTheme = false, children} : Steps ) => {
+const Steps = ({ className = "", darkTheme = false, children }: Steps) => {
   return (
-    <div className={`xl:px-[5rem] rounded-[10px] ${className} ${darkTheme ? "bg-dark-grey-blue text-light-cream" : "text-dark-grey-blue"}`}>
+    <div
+      className={`xl:px-[5rem] rounded-[10px] ${className} ${
+        darkTheme ? "bg-dark-grey-blue text-light-cream" : "text-dark-grey-blue"
+      }`}
+    >
       {children}
     </div>
   );
 };
 
 Steps.Title = () => {
-  return <h2 className=" font-black text-grey text-center md:text-left text-2xl mt-[7.5rem] mb-10">
-  How it works
-  </h2>
-}
+  return (
+    <h2 className=" font-black text-grey text-center md:text-left text-2xl mt-[7.5rem] mb-10">
+      How it works
+    </h2>
+  );
+};
 
-Steps.CoreDesign = ({darkTheme = false}) => {
+Steps.CoreDesign = ({ darkTheme = false }) => {
   return (
     <>
       <HorizontalLine darkTheme={darkTheme} />
@@ -47,11 +52,11 @@ Steps.CoreDesign = ({darkTheme = false}) => {
         />
       </div>
     </>
-  )
-}
+  );
+};
 
 Steps.Button = () => {
-  return <Button />
-}
+  return <Button />;
+};
 
 export default Steps;
