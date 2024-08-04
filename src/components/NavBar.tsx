@@ -33,22 +33,46 @@ const NavBar = () => {
       />
 
       <ul
-        className={`${
+        className={`uppercase ${
           isNavActive ? appliedDesign : "hidden"
         } md:flex md:${appliedDesign}`}
       >
         <li>
-          <NavLink to="/" onClick={() => setIsNavActive(false)}>
+          <NavLink
+            to="/"
+            onClick={() => setIsNavActive(false)}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-dark-grey-blue" : ""
+              } hover:text-dark-grey-blue`
+            }
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" onClick={() => setIsNavActive(false)}>
+          <NavLink
+            to="/about"
+            onClick={() => setIsNavActive(false)}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-dark-grey-blue" : ""
+              } hover:text-dark-grey-blue`
+            }
+          >
             About Us
           </NavLink>
         </li>
         <li>
-          <NavLink to="/create-your-plan" onClick={() => setIsNavActive(false)}>
+          <NavLink
+            to="/create-your-plan"
+            onClick={() => setIsNavActive(false)}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-dark-grey-blue" : ""
+              } duration-300 ease-in-out hover:text-dark-grey-blue`
+            }
+          >
             Create Your Plan
           </NavLink>
         </li>

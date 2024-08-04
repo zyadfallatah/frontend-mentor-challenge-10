@@ -123,7 +123,7 @@ const Plan = () => {
           />
         </PlanOptions>
 
-        <div className="px-6 py-8 bg-dark-grey-blue rounded-lg">
+        <div className="px-6 py-8 xl:px-16 xl:py-12 bg-dark-grey-blue rounded-lg">
           <h2 className="barlow text-grey text-[1rem] font-normal uppercase mb-2">
             Order Summary
           </h2>

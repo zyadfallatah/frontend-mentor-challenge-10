@@ -2,6 +2,12 @@ import arrow from "../../assets/plan/desktop/icon-arrow.svg";
 import { OptionsAction, Plan } from "./useOptions";
 import { createContext, PropsWithChildren, useContext, useState } from "react";
 
+type PlanStates = {
+  header: string;
+  disabled?: boolean;
+  active?: boolean;
+};
+
 type PlansOptionProps = {
   plan: keyof Plan;
   dispatcher?: React.Dispatch<OptionsAction>;
@@ -15,6 +21,8 @@ const useOptionsContext = () => {
   return useContext(OptionContext);
 };
 
+type PlansOptionType = PlansOptionProps & PlanStates & PropsWithChildren;
+
 const PlansOption = ({
   header,
   plan,
@@ -22,12 +30,7 @@ const PlansOption = ({
   children,
   disabled = false,
   active = false,
-}: PlansOptionProps &
-  PropsWithChildren & {
-    header: string;
-    disabled?: boolean;
-    active?: boolean;
-  }) => {
+}: PlansOptionType) => {
   const [isOptionOpened, setIsOptionOpened] = useState(active);
 
   const handleOptionOpening = function () {
