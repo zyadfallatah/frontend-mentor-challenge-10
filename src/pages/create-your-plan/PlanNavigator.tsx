@@ -12,7 +12,7 @@ const Navigation = ({ number, title, disabled, active }: NavigationType) => {
     <div
       className={`${
         disabled ? "text-gray-400" : "group text-grey"
-      } flex items-center gap-7 font-black text-2xl py-6 pr-16`}
+      } flex items-center gap-7 font-black text-2xl py-6 min-w-[255px]`}
     >
       <p
         className={`fraunces min-w-8 group-hover:text-dark-cyan ${
