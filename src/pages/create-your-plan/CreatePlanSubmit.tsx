@@ -16,7 +16,7 @@ const CreatePlanSubmit = ({ state }: { state: Plan }) => {
   return (
     <input
       type="submit"
-      value="Create my plan"
+      value="Create my plan!"
       className={`block w-fit ${
         isDisabled
           ? "bg-grey cursor-not-allowed"
