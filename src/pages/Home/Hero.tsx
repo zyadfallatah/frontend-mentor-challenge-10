@@ -5,7 +5,7 @@ import desktopHero from "../../assets/home/desktop/image-hero-coffeepress.jpg";
 
 const HomeHero = () => {
   return (
-    <div className="relative isolate min-h-[500px] lg:min-[600px]">
+    <div className="relative isolate min-h-[500px] lg:min-h-[600px]">
       <img
         src={mobileHero}
         alt="hero image"
@@ -23,10 +23,10 @@ const HomeHero = () => {
       />
 
       <div className="text-light-cream text-center md:text-left max-w-[279px] md:max-w-[398px] lg:max-w-[493px] mx-auto md:mx-0 md:ml-14">
-        <h1 className="text-[40px] lg:text-7xl font-bold pt-[100px] mb-6">
+        <h1 className="text-[40px] lg:text-7xl font-black pt-[100px] mb-6 lg:mb-8">
           Great coffee made simple.
         </h1>
-        <p className="text-[15px] mb-10">
+        <p className="text-[15px] mb-10 lg:mb-14">
           Start your mornings with the world’s best coffees. Try our expertly
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
