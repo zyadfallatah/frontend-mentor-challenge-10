@@ -13,19 +13,15 @@ const Footer = () => {
         <ul className="flex flex-col md:flex-row gap-6 text-grey font-bold text-[.75rem]">
           <li>
             <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `${
-                  isActive ? "text-light-cream" : ""
-                } hover:text-light-cream  duration-200 ease-in-out`
-              }
+              to="/frontend-mentor-challenge-10/"
+              className={`hover:text-light-cream  duration-200 ease-in-out`}
             >
               HOME
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="/frontend-mentor-challenge-10/about"
               className={({ isActive }) =>
                 `${
                   isActive ? "text-light-cream" : ""
@@ -37,7 +33,7 @@ const Footer = () => {
           </li>
           <li>
             <NavLink
-              to="/create-your-plan"
+              to="/frontend-mentor-challenge-10/create-your-plan"
               className={({ isActive }) =>
                 `${
                   isActive ? "text-light-cream" : ""
@@ -68,7 +64,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about">
+            <Link to="#">
               <svg
                 className="group"
                 xmlns="http://www.w3.org/2000/svg"
