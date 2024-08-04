@@ -1,6 +1,4 @@
 import lightLogo from "../assets/shared/desktop/logo-light.svg";
-import twitter from "../assets/shared/desktop/icon-twitter.svg";
-import instagram from "../assets/shared/desktop/icon-instagram.svg";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 

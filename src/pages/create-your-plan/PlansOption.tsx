@@ -1,4 +1,3 @@
-import arrow from "../../assets/plan/desktop/icon-arrow.svg";
 import { OptionsAction, Plan } from "./useOptions";
 import { createContext, PropsWithChildren, useContext, useState } from "react";
 
@@ -46,7 +45,9 @@ const PlansOption = ({
   return (
     <div className={`${isOptionOpenedAndNotDisabled ? "mb-24" : ""}`}>
       <header
-        className="flex justify-between items-center gap-16 mb-8"
+        className={`flex justify-between items-center gap-16 mb-8 ${
+          disabled ? " cursor-not-allowed" : "cursor-pointer"
+        }`}
         onClick={() => handleOptionOpening()}
       >
         <h3
@@ -56,11 +57,19 @@ const PlansOption = ({
         >
           {header}
         </h3>
-        <img
-          src={arrow}
-          alt="arrow image"
+        <svg
           className={`${isOptionOpenedAndNotDisabled ? "rotate-180" : ""}`}
-        />
+          width="19"
+          height="13"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z"
+            fill="#0E8784"
+            fillRule="nonzero"
+            className={`${disabled ? " opacity-50" : ""}`}
+          />
+        </svg>
       </header>
       <main
         className={` grid gap-4 md:grid-cols-3 ${
@@ -99,7 +108,7 @@ PlansOption.Option = ({
       <label
         htmlFor={`id-${uniqueID}`}
         className="block text-dark-grey-blue bg-light-gray hover:bg-pale-orange peer-checked:bg-dark-cyan peer-checked:text-light-cream p-6 rounded-lg
-        md:min-h-[15.625rem]"
+        md:min-h-[15.625rem] cursor-pointer duration-150 ease-in-out"
         onClick={() => dispatcher!({ type: `set_${plan}`, payload: title })}
       >
         <h2 className="text-2xl font-black md:mb-6">{title}</h2>

@@ -11,7 +11,9 @@ const Navigation = ({ number, title, disabled, active }: NavigationType) => {
   return (
     <div
       className={`${
-        disabled ? "text-gray-400" : "group text-grey"
+        disabled
+          ? "text-gray-400 cursor-not-allowed"
+          : "group text-grey cursor-pointer"
       } flex items-center gap-7 font-black text-2xl py-6 min-w-[255px]`}
     >
       <p
