@@ -3,6 +3,7 @@ import PlanOptions from "./PlansOption";
 import Summary from "./Summary";
 import { useOptions } from "./useOptions";
 import Order from "./Order";
+import CreatePlanSubmit from "./CreatePlanSubmit";
 
 const Plan = () => {
   const [state, dispatch] = useOptions();
@@ -124,11 +125,7 @@ const Plan = () => {
         </div>
       </div>
 
-      <input
-        type="submit"
-        value="Create my plan"
-        className="block w-fit mt-14 mx-auto md:mx-0 text-[18px] px-8 py-4 bg-dark-cyan rounded-[6px] font-black fraunces text-light-cream"
-      />
+      <CreatePlanSubmit state={state} />
     </form>
   );
 };
