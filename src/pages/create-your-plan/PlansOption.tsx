@@ -37,8 +37,11 @@ const PlansOption = ({
     }
     setIsOptionOpened(!isOptionOpened);
   };
+
+  const isOptionOpenedAndNotDisabled = isOptionOpened && !disabled;
+
   return (
-    <div className={`${isOptionOpened ? "mb-24" : ""}`}>
+    <div className={`${isOptionOpenedAndNotDisabled ? "mb-24" : ""}`}>
       <header
         className="flex justify-between items-center gap-16 mb-8"
         onClick={() => handleOptionOpening()}
@@ -53,12 +56,14 @@ const PlansOption = ({
         <img
           src={arrow}
           alt="arrow image"
-          className={`${isOptionOpened ? "rotate-180" : ""}`}
+          className={`${isOptionOpenedAndNotDisabled ? "rotate-180" : ""}`}
         />
       </header>
       <main
         className={` grid gap-4 md:grid-cols-3 ${
-          isOptionOpened ? "block opacity-100" : "hidden opacity-0"
+          isOptionOpenedAndNotDisabled
+            ? "block opacity-100"
+            : "hidden opacity-0"
         } `}
       >
         <OptionContext.Provider value={{ plan, dispatcher }}>

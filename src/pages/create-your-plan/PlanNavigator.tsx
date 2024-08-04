@@ -16,14 +16,14 @@ const Navigation = ({ number, title, disabled, active }: NavigationType) => {
     >
       <p
         className={`fraunces min-w-8 group-hover:text-dark-cyan ${
-          active ? "text-dark-cyan" : ""
+          active && !disabled ? "text-dark-cyan" : ""
         }`}
       >
         {"0" + number}
       </p>
       <h3
         className={`group-hover:text-dark-grey-blue ${
-          active ? "text-dark-grey-blue" : ""
+          active && !disabled ? "text-dark-grey-blue" : ""
         }`}
       >
         {title}
@@ -38,7 +38,7 @@ const PlanNavigator = ({ state }: { state: Plan }) => {
   };
 
   return (
-    <div className="hidden h-fit xl:block divide-y-[1px] divide-grey">
+    <div className="hidden sticky top-0 h-fit xl:block divide-y-[1px] divide-grey">
       <Navigation number={1} title="Preferences" active={true} />
       <Navigation
         number={2}
@@ -53,6 +53,7 @@ const PlanNavigator = ({ state }: { state: Plan }) => {
       <Navigation
         number={4}
         title="Grind Option"
+        active={isStateChosen(state.grind)}
         disabled={state.howToDrink === "Capsule"}
       />
       <Navigation
