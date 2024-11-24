@@ -17,7 +17,7 @@ import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/frontend-mentor-challenge-10/" element={<MainLayout />}>
+    <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path="about" element={<AboutPage />} />
       <Route path="create-your-plan" element={<CreateYourPlanPage />} />
