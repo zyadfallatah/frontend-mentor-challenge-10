@@ -13,7 +13,7 @@ const Footer = () => {
         <ul className="flex flex-col md:flex-row gap-6 text-grey font-bold text-[.75rem]">
           <li>
             <NavLink
-              to="/frontend-mentor-challenge-10/"
+              to="/"
               className={`hover:text-light-cream  duration-200 ease-in-out`}
             >
               HOME
@@ -21,7 +21,7 @@ const Footer = () => {
           </li>
           <li>
             <NavLink
-              to="/frontend-mentor-challenge-10/about"
+              to="/about"
               className={({ isActive }) =>
                 `${
                   isActive ? "text-light-cream" : ""
@@ -33,7 +33,7 @@ const Footer = () => {
           </li>
           <li>
             <NavLink
-              to="/frontend-mentor-challenge-10/create-your-plan"
+              to="/create-your-plan"
               className={({ isActive }) =>
                 `${
                   isActive ? "text-light-cream" : ""
