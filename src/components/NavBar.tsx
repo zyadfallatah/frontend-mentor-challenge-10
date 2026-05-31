@@ -39,7 +39,7 @@ const NavBar = () => {
       >
         <li>
           <NavLink
-            to="/frontend-mentor-challenge-10/"
+            to="/"
             onClick={() => setIsNavActive(false)}
             className={`hover:text-dark-grey-blue`}
           >
@@ -48,7 +48,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink
-            to="/frontend-mentor-challenge-10/about"
+            to="/about"
             onClick={() => setIsNavActive(false)}
             className={({ isActive }) =>
               `${
@@ -61,7 +61,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink
-            to="/frontend-mentor-challenge-10/create-your-plan"
+            to="/create-your-plan"
             onClick={() => setIsNavActive(false)}
             className={({ isActive }) =>
               `${
